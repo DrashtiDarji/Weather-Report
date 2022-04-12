@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* fonts */
+@font-face {
+    font-family:fredoka;
+    src: url('./font/Fredoka_Merriweather/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf')
+}
+@font-face{
+    font-family: merriWeather;
+    src: url('./font/Fredoka_Merriweather/Merriweather/Merriweather-Regular.ttf');
+}
+.weather_container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: grey; */
+    /* background-image: url("https://www.pexels.com/photo/grass-field-under-cloudy-sky-125457"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    padding-left: 400px;
+    font-family: fredoka ;
+    font-size: 30px;    
+    color: white;
+}
+.page_view{
+
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    display: flex;
+}
+.show_report{
+    width: 65%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+
+.temp_location{
+    height: 60%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.temp{
+    font-family: merriWeather;
+    font-size: 100px;
+    color: white;
+}
+.location{
+    font-family: merriWeather;
+    font-size: 20px;
+    display: flex;
+    column-gap: 10px;
+    color: white;
+}
+.time_icon{
+    margin: 10px;
+    display: flex;
+    column-gap: 10px;
+    color: white;
+}
+.other_info{
+    height: 30%;
+    width: 100%;
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 10px; */
+    row-gap: 10px;
+    padding-left: 10%;
+    color: white
+    
+}
+.other_ul{
+    display: flex;
+    list-style-type: none;
+    font-family: merriWeather;
+}
+.other_ul>li{
+    width: 17%;
+}
+.select_option{
+    width: 35%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.search_container{
+    width: 80%;
+    display: flex;
+    
+}
+.select_container{
+    width: 80%;
+    height: 50%;
+    /* background-color: rebeccapurple; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.search_input{
+    outline: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    background-color: white;
+    width: 90%;
+    height: 30px;
+    text-indent: 10px;
+
+}
+.search_icon{
+    width: 10%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+.tooltip_container{
+    margin: 2px;
+    display: none;
+}
+.tooltip{
+    width: 60%;
+    padding: 1px 5px;
+    border: 5px;
+    color: red;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.Fixed_location_container{
+    width: 80%;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.fixed_location_ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-family: merriWeather;
+    color: #ECD5BB;
+}
+.fixed_location_ul>li{
+    cursor: pointer;
+}
+.fixed_location_ul>li:hover{
+    color: #710117;
+}
+
+
+@media (min-width:280px) and (max-width:420px){
+    .page_view{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0;
+    }
+    .temp{
+        font-size: 45px;
+    }
+    .show_report{
+
+        padding-top: 200px;
+    }
+    .location{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .other_info{
+        width: 100%;
+        /* padding:1px; */
+        flex-direction: row;
+    }
+    .other_ul{
+        flex-direction: column;
+        width: 50%;
+    }
+    .other_ul>li{
+        width: 100%;
+    }
+    .select_option{
+        width: 100%;
+        align-items: flex-start;
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+    .fixed_location_ul{
+        color: black;
+    }
+    .select_container{
+        width: 100%;
+        padding: 20px;
+    }
+    .logo{
+        display: block;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .search_input{
+        width: 100%;
+    }
+}

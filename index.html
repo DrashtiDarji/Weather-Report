@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="weather_container">
+        <div class="page_view">
+            <div class="show_report">
+                <div class="logo">
+                    <p>Weather Report</p>
+                </div>
+                <div class="temp_location">
+                    <p id="temp" class="temp">27°C</p>
+                    <div id="location" class="location">
+                        <div id="area_name">Mumbai</div>
+                        <div id="date_id">10-Apr-2022-Sun</div>
+                    </div>
+                    <div class="time_icon">
+                        <div id="time_id">12:22</div>
+                        <img id="icon_id" src="" alt="weather_icon"></img>
+                    </div>
+                    
+                </div>
+                <div class="other_info">
+                    <!-- <table>
+                        <thead>
+                            <tr>
+                                <th>Humidity</th>
+                                <th>Max. Temp</th>
+                                <th>Min. Temp</th>
+                                <th>wind</th>
+                                <th>Discription</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>80%</td>
+                                <td>39.99°C</td>
+                                <td>35.99</td>
+                                <td>7</td>
+                                <td>Haze</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                    <ul class="other_ul">
+                        <li>Humidity</li>
+                        <li>Max. Temp</li>
+                        <li>Min. Temp</li>
+                        <li>wind</li>
+                        <li>Discription</li>
+                    </ul>
+                    <ul class="other_ul">
+                        <li id="humidity_id">80%</li>
+                        <li id="max_temp_id">39.99°C</li>
+                        <li id="min_temp_id">35.99°C</li>
+                        <li id="wind_id">7</li>
+                        <li id="description_id">Haze</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="select_option">
+                <div class="select_container">
+                    <div class="search_container">
+                        <input type="search" class="search_input" id="search" placeholder="search Location" onkeyup="enterCheck(event)">
+                        <button class="search_icon" id="search_btn" onclick="readValue()">
+                            <i class="fas fa-search"></i>
+                            <!-- <i class="far fa-search"></i> -->
+                        </button> 
+                    </div>
+                    <div class="tooltip_container" id="tooltip">
+                        <div class="tooltip" id="tooltip_message">Some Error</div>
+                    </div>
+                    <div class="Fixed_location_container">
+                        <ul class="fixed_location_ul">
+                            <li id="mumbai" onclick="getSelectedCity(id)">Mumbai</li>
+                            <li id="bangalore" onclick="getSelectedCity(id)">Bangalore</li>
+                            <li id="chennai" onclick="getSelectedCity(id)">Chennai</li>
+                            <li id="new delhi" onclick="getSelectedCity(id)">New Delhi</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
